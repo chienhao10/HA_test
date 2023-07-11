@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>小精灵留下的线索</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    #welcome-image {
+      max-width: 880px;
+      max-height: 650px;
+      margin: 0 auto;
+    }
+    #selected-image {
+      display: none;
+      max-width: 880px;
+      max-height: 650px;
+      margin: 0 auto;
+    }
+    .thumbnail {
+      display: inline-block;
+      margin: 10px;
+      cursor: pointer;
+    }
+    .thumbnail img {
+      max-width: 200px;
+      max-height: 150px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>小精灵留下的线索</h1>
+  
+  <div id="welcome-image">
+    <img src="https://i.pinimg.com/originals/f6/83/fe/f683fe1434d5e8f58a2525b441a2905e.gif" alt="Welcome Image">
+  </div>
+  
+  <div id="selected-image">
+    <img src="" alt="Selected Image">
+  </div>
+  
+  <div id="thumbnails">
+    <div class="thumbnail" onclick="showImage('https://github.com/chienhao10/HA_test/blob/main/1F.jpg?raw=true')">
+      <img src="https://github.com/chienhao10/HA_test/blob/main/1F.jpg?raw=true" alt="Image 1">
+    </div>
+    <div class="thumbnail" onclick="showImage('https://github.com/chienhao10/HA_test/blob/main/2FM.jpg?raw=true')">
+      <img src="https://github.com/chienhao10/HA_test/blob/main/2FM.jpg?raw=true" alt="Image 2">
+    </div>
+    <div class="thumbnail" onclick="showImage('https://github.com/chienhao10/HA_test/blob/main/2FO.jpg?raw=true')">
+      <img src="https://github.com/chienhao10/HA_test/blob/main/2FO.jpg?raw=true" alt="Image 3">
+    </div>
+    <div class="thumbnail" onclick="showImage('https://github.com/chienhao10/HA_test/blob/main/2FG.jpg?raw=true')">
+      <img src="https://github.com/chienhao10/HA_test/blob/main/2FG.jpg?raw=true" alt="Image 4">
+    </div>
+  </div>
+  
+  <br>隐藏提示</br>
+  <br>1 - 主卧</br>
+  <br><b>-.-. .... .- .. .-.</b></br>
+  <br>老</br>
+  <br>婆</br>
+  <br><b>莫</b>慌</br>
+  <br><b>斯</b>考一下</br>
+  <br><b>店</b>里有啥</br>
+  <br><b>码</b>上就有</br>
+ 
+ <br>2 - 2F</br>
+ <br>画的后面总会有故事</br>
+  
+  <script>
+    function showImage(imageUrl) {
+      document.getElementById("welcome-image").style.display = "none";
+      var selectedImage = document.getElementById("selected-image");
+      selectedImage.style.display = "block";
+      selectedImage.getElementsByTagName("img")[0].src = imageUrl;
+    }
+  </script>
+</body>
+</html>
